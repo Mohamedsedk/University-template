@@ -1,0 +1,545 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+ }
+ .header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.6) ,rgba(4,9,30,0.6)),url(../images/eduford_img/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+ }
+ nav{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+ label.logo img{
+
+    width: 170px;
+    animation-name:logo ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+ }
+ 
+ nav ul{
+    float: right;
+    margin-right: 20px;
+    
+ 
+ }
+ nav ul li{
+    display: inline-block;
+    line-height: 30px;
+    margin: 25px 8px;
+ }
+ nav ul li a {
+    color: white;
+    font-size: 22px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    text-transform: capitalize;
+ 
+ }
+ nav ul li a:hover {
+    font-size: x-large;
+    transition: .7s;
+ 
+ }
+ a.active{
+    background: none;
+    color: #b3db4d;
+    font-size: x-large;
+    font-weight: 600;
+ }
+ 
+ .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+ 
+ }
+ 
+ #check{
+    display: none;
+ }
+ nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+    display: block;
+    border-radius:2px;
+    background-color: #f44336;
+    margin: auto;
+    text-align: center;
+    transition: 0.5s;
+    animation-name:main-links ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+ }
+ nav ul li a:hover::after{
+    width: 100%;
+ }
+ .txt-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+ }
+ 
+ .txt-box h1{
+    font-size: 50px;
+ }
+ 
+ .txt-box p{
+    font-size: 16px;
+    margin: 2% 0 5%;
+    letter-spacing: 1px;
+   
+ }
+ 
+ .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 4px dotted #fff ;
+    padding: 10px 25px;
+    font-size: large;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    
+ }
+ .hero-btn:hover{
+    background-color: #f44336;
+    border: 4px dotted rgb(233, 219, 219);
+    
+ }
+ @media(max-width:950px){
+    label.logo{
+       font-size: 30px;
+       padding-left: 10px;
+       order: -1;
+
+    }
+    nav ul li a{
+       font-size: 18px;
+    }
+ }
+ @media (max-width:850px) {
+    .txt-box h1{
+       font-size: 22px;
+       padding-bottom: 10px;
+   }
+   .txt-box .hero-btn{
+    color: #fff;
+   }
+    .checkbtn{
+       display: block;
+    }
+    ul{
+       position: fixed;
+       width: 25%;
+       padding: 0;
+       height: 100vh;
+       background-color: #214266;
+       top:70px;
+       right: -100%;
+       text-align: center;
+       transition: all .5s;
+       z-index: 11546654;
+       
+    }
+    nav ul li{
+       display: block;
+       margin: 50px 0px;
+       line-height: 25px  ;
+    }
+    nav ul li a{
+       font-size:20px ;
+ 
+    }
+    a:hover , a.active{
+       background: none;
+       color: #b3db4d;
+       font-size: x-large;
+       font-weight: 600;
+    }
+    #check:checked ~ ul{
+       right: -18px;
+    } 
+ }
+ 
+ @keyframes logo{
+    25%{
+        transform: rotateZ(-20deg);
+    }
+    50%{
+        transform: rotateZ(0deg);
+ 
+    }
+    75%{
+        transform: rotateZ(20deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+ }
+ @keyframes main-links{
+    20%{
+        background-color: #f44336;
+ 
+    }
+    40%{
+        background-color: blue;
+ 
+    }
+    60%{
+        background-color: aqua;
+    }
+    80%{
+        background-color: yellowgreen;
+ 
+    }
+    100%{
+        background-color: violet;
+    }
+ }
+ 
+/* course section */
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top:100px ;
+}
+.course h1{
+    font-size: xx-large;
+    font-weight: 700;
+    
+}
+
+.course p{
+    color: rgb(94, 91, 91);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    
+}
+
+.course-row{
+    margin-top: 5% ;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background-color: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 1s;
+
+
+}
+.course-col h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+.course-col:hover{
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0,0.5);
+}
+@media(max-width:700px){
+    .course-row{
+        flex-direction: column;
+    }
+}
+
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+
+    
+}
+.campus h1{
+    font-size: xx-large;
+    font-weight: 700;
+}
+.campus p{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.campus-row{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.campus-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+.campus-col .layer{
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+
+
+}
+
+.campus-col .layer:hover{
+    background-color:  rgba(226, 0, 0, 0.6);
+}
+.campus-col .layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: 0.5s;
+
+}
+.campus-col .layer:hover h3{
+    bottom: 48%;
+    opacity: 1;
+}
+
+@media (max-width:700px){
+    .campus-row{
+        flex-direction: column;
+    }
+
+}
+
+/*facilities section*/
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+}
+.facilities p{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.facilities h1{
+    font-size: xx-large;
+    font-weight: 700;
+}
+.facilities .facil-row{
+    display: flex;
+    justify-content: space-between;
+}
+.facilities .facil-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    text-align: left;
+    transition: 1s;
+
+
+}
+.facilities .facil-col:hover{
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0,0.5);
+
+}
+.facilities .facil-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities .facil-col p{
+    padding: 0;
+    padding-left: 4px;
+}
+.facilities .facil-col h3{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 4px;
+
+}
+@media(max-width:700px){
+    .facilities .facil-row{
+        flex-direction: column;
+    }
+
+}
+
+/* testmonials section*/
+
+.testmonials{
+    width: 80%;
+    margin: auto;
+    padding-top:50px ;
+    text-align: center;
+    
+}
+.testmonials h1{
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.testmonials p{
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+
+.testmonials .test-row{
+    display: flex;
+    justify-content: space-between;
+
+}
+.testmonials .test-col{
+    flex-basis: 41%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    transition: 1s;
+
+}
+.test-col:hover{
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0,0.5);
+}
+.testmonials .test-col img{
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+
+}
+
+.testmonials .test-col p{
+    padding: 0;
+    margin-top: 8px;
+}
+.testmonials .test-col h3{
+    margin-top: 10px;
+    text-align: left;
+}
+
+.testmonials .fa{
+    color: #f44336;
+    padding-top: 10px;
+}
+
+@media (max-width:700px){
+    .testmonials .test-row{
+        flex-direction: column;
+    }
+}
+
+/*Call To action  Section */
+
+.cta{
+    margin: 50px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.7)),url(../images/eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0px;
+    transition: 1s;
+}
+
+.cta:hover{
+    width: 90%;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0,0.5);
+
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* footer section */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+
+
+}
+
+.footer h4{
+    margin-bottom:20px ;
+    margin-top: 20px;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.footer .icons{
+    color: #f44336;
+    padding: 20px 10px;
+    font-size: large;
+}
+
+
+.footer .fa-brands{
+    padding-left: 30px;
+    margin-top: 5px;
+    font-size: x-large;
+    cursor: pointer;
+    transition: 1s;
+
+}
+.footer .fa{
+    padding: 20px 2px;
+    margin-top:5px ;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.footer p{
+    padding-left: 25px;
+}
+
+ .footer .fa-brands:hover{
+    font-size: xx-large;
+   
+}
